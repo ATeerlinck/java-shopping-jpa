@@ -1,0 +1,19 @@
+*{
+    padding: 1em;
+    text-align: center;
+}
+table{
+    margin: auto;
+    width: auto;
+}
+table *{
+    padding: 1em;
+}
+
+.green {
+    color: #008000;
+}
+
+.red {
+    color: #bb0000;
+}

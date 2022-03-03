@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head"></head>
+<body>
+<header th:replace="frags :: header"></header>
+<span th:class="${class}" th:text="${message}">Message</span>
+<footer th:replace="frags :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head"></head>
+<body>
+<header th:replace="frags :: header"></header>
+<table>
+    <tr>
+        <th>Bads</th>
+    </tr>
+    <tr th:each="item : ${bads}">
+        <td>
+            <a th:href="@{'/items/'+${item.name}}">
+                <span th:text="${item.name}">NAME</span>
+            </a>
+        </td>
+    </tr>
+</table>
+<footer th:replace="frags :: footer"></footer>
+</body>
+</html>

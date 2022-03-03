@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">TITLE</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<header th:fragment="header">
+    <h1><a th:href="@{/}">Welcome to Alex's Bads!</a></h1>
+    <h2>They are like goods, but not good</h2>
+</header>
+<footer th:fragment="footer">
+    <p>©Alex Teerlinck 2022</p>
+</footer>
+</body>
+</html>

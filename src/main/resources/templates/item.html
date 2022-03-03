@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head"></head>
+<body>
+<div th:insert="frags :: header"></div>
+<table>
+    <tr>
+        <th>Item</th>
+        <th>Price per item</th>
+        <th>Inventory</th>
+        <th>Buy Now</th>
+    </tr>
+    <tr>
+        <td>
+            <span th:text="${item.name}">NAME</span>
+        </td>
+        <td>
+            <span th:text="'$'+${item.price}">PRICE</span>
+        </td>
+        <td>
+            <span th:text="${item.inventory}">INVENTORY</span>
+        </td>
+        <td>
+            <form method="post" th:object="${item}"
+                  th:action="@{/buy-item}">
+                <label for="search">How many are you buyin?</label>
+                <input type="number" min="0" th:max="${item.inventory}" id="search" name="amt" autofocus th:value="${amt}">
+                <input type="hidden" name="id" th:value="*{id}" />
+                <input type="submit" value="Buy Now">
+            </form>
+        </td>
+    </tr>
+</table>
+<div th:replace="frags :: footer"></div>
+</body>
+</html>
